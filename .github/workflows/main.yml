@@ -24,3 +24,5 @@ jobs:
 
     - name: nodejsscan
       uses: ajinabraham/njsscan-action@v5
+      with:
+        args: '.'
