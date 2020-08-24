@@ -12,5 +12,3 @@ checks:
 plugins:
   nodesecurity:
     enabled: true
-  eslint:
-    enabled: true
