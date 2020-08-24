@@ -1,7 +1,9 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
-    jobs:
-      - node/test
+jobs:
+  build:
+    docker:
+      - image: 'circleci/python:3.8.4'
+    steps:
+      - checkout
+      - run: pip3 install --upgrade njsscan
+      - run: njsscan .
