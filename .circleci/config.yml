@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  sast-nodejsscan:
+  build:
     docker:
       - image: 'circleci/python:3.8.4'
     steps:
