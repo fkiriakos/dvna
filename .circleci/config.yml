@@ -10,8 +10,7 @@ jobs:
       - run: pip3 install njsscan
       - run: njsscan . --json -o ~/workspace/artifacts/njsscan.json
       - store_artifacts:
-          path: ~/workspace/artifacts
-          destination: njsscan.json
+          path: ~/workspace/artifacts/njsscan.json
 
 workflows:
   version: 2.1
