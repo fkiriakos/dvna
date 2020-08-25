@@ -3,10 +3,14 @@ jobs:
   nodejsscan:
     docker:
       - image: 'circleci/python:3.8.4'
+    working_directory: /tmp
     steps:
       - checkout
-      - run: pip3 install --upgrade njsscan
-      - run: njsscan .
+      - run: pip3 install njsscan
+      - run: njsscan . --json -o /tmp/njsscan.json
+      - store_artifacts:
+          path: /tmp/njsscan.json
+          destionation: njsscan.json
 
 workflows:
   version: 2.1
