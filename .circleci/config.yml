@@ -3,14 +3,14 @@ jobs:
   nodejsscan:
     docker:
       - image: 'circleci/python:3.8.4'
-    working_directory: /tmp
+    working_directory: ~/dvna
     steps:
       - checkout
+      - run: mkdir ~/dvna/artifacts/
       - run: pip3 install njsscan
-      - run: njsscan . --json -o /tmp/njsscan.json
+      - run: njsscan . --json -o ~/dvna/artifacts/njsscan.json
       - store_artifacts:
-          path: /tmp/njsscan.json
-          destionation: njsscan.json
+          path: ~/dvna/artifacts
 
 workflows:
   version: 2.1
