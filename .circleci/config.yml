@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: mkdir ~/workspace/artifacts/
       - run: pip3 install njsscan
-      - run: njsscan . --missing-controls  --sonarqube -o ~/workspace/artifacts/njsscan.json
+      - run: njsscan . --missing-controls  --json -o ~/workspace/artifacts/njsscan.json
       - store_artifacts:
           path: ~/workspace/artifacts/njsscan.json
 
