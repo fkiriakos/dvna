@@ -25,10 +25,10 @@ jobs:
     - name: nodejsscan
       uses: ajinabraham/njsscan-action@v5
       with:
-        args: '. --sonarqube --output /home/runner/work/dvna/dvna/njsscan.json'
+        args: '. --sonarqube --output /github/workspace/njsscan.json'
 
     - uses: actions/upload-artifact@v2
       with:
         name: nodejsscan-result
-        path: /github/workspace/njsscan.json
+        path: /home/runner/work/dvna/dvna/njsscan.json
         if-no-files-found: error
