@@ -1,0 +1,14 @@
+---
+version: "2"
+checks:
+  similar-code:
+    enabled: true
+    config:
+      threshold: 3
+  identical-code:
+    enabled: true
+    config:
+      threshold: 3
+plugins:
+  nodesecurity:
+    enabled: true
