@@ -25,4 +25,9 @@ jobs:
     - name: nodejsscan
       uses: ajinabraham/njsscan-action@v5
       with:
-        args: '.'
+        args: '. --sonarqube --output $GITHUB_WORKSPACE/njsscan.json'
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: njsscan-results
+        path: $GITHUB_WORKSPACE/njsscan.json
