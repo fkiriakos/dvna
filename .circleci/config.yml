@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  shiftleft: shiftleft/shiftleft@1.0.6
+jobs:
+  shiftleft:
+    machine: true
+    steps:
+      - shiftleft/analyze:
+          app: dvna
+          target: .
+          language: js
+          cpg: true
+
+workflows:
+  version: 2.1
+  run-sast-scan:
+    jobs:
+      - shiftleft
