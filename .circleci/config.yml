@@ -6,6 +6,7 @@ jobs:
   shiftleft:
     machine: true
     steps:
+      - checkout
       - shiftleft/analyze:
           app: dvna
           target: .
