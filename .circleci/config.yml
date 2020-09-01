@@ -8,9 +8,10 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
+      - run: pushd ~/workspace
       - shiftleft/analyze:
           app: dvna
-          target: ~/workspace/${CIRCLE_PROJECT_REPONAME}
+          target: ${CIRCLE_PROJECT_REPONAME}
           language: js
           cpg: true
 
