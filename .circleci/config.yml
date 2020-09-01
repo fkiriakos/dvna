@@ -8,8 +8,8 @@ jobs:
     steps:
       - checkout
       - shiftleft/analyze:
-          app: dvna
-          target: .
+          app: ${CIRCLE_PROJECT_REPONAME}
+          target: ${CIRCLE_PROJECT_REPONAME}
           language: js
           cpg: true
 
