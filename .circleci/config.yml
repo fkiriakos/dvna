@@ -5,10 +5,8 @@ orbs:
 jobs:
   shiftleft:
     machine: true
-    working_directory: ~/workspace
     steps:
       - checkout
-      - run: pwd && ls -lh
       - shiftleft/analyze:
           app: dvna
           target: .
