@@ -5,11 +5,12 @@ orbs:
 jobs:
   shiftleft:
     machine: true
+    working_directory: ${CIRCLE_WORKING_DIRECTORY}
     steps:
       - checkout
       - shiftleft/analyze:
           app: dvna
-          target: ${CIRCLE_WORKING_DIRECTORY}/${CIRCLE_PROJECT_REPONAME}/
+          target: ${CIRCLE_PROJECT_REPONAME}
           language: js
           cpg: true
 
