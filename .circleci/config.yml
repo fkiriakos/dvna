@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
-      - run: pushd ~/workspace/${CIRCLE_PROJECT_REPONAME}
+      - run: pwd && ls -lh
       - shiftleft/analyze:
           app: dvna
           target: .
