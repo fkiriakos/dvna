@@ -9,7 +9,7 @@ jobs:
       - checkout
       - shiftleft/analyze:
           app: dvna
-          target: ${CIRCLE_PROJECT_REPONAME}
+          target: ${CIRCLE_WORKING_DIRECTORY}/${CIRCLE_PROJECT_REPONAME}
           language: js
           cpg: true
 
