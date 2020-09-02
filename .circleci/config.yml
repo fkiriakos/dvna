@@ -11,3 +11,5 @@ workflows:
           target: .
           language: js
           cpg: true
+          pre-analyze:
+            - run: shiftleft/auth-check
