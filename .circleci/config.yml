@@ -12,4 +12,4 @@ workflows:
           language: js
           cpg: true
           pre-analyze:
-            - run: shiftleft/auth-check
+            - run: echo 'running shiftleft analyze'
