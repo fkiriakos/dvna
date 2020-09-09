@@ -1,5 +1,3 @@
-source:
-  branch: master
 build_rules:
   - id: build-rule-identifier
     finding_types:
