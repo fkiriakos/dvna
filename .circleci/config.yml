@@ -12,6 +12,7 @@ jobs:
           target: .
           language: js
           cpg: true
+      - run: sl check-analysis --app dvna --branch=$CIRCLE_BRANCH
 
 workflows:
   version: 2.1
