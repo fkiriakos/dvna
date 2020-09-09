@@ -12,6 +12,7 @@ jobs:
           target: .
           language: js
           cpg: true
+          extra-args: '--exclude public/assets/ --ignore-minified'
       - run: sl check-analysis --app dvna
 
 workflows:
