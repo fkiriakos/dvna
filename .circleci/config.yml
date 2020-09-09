@@ -8,8 +8,14 @@ jobs:
     steps:
       - checkout
       - shiftleft/install
-      - run: sl analyze --app dvna --cpg --js . -- --exclude public/assets/ --ignore-minified
-      - run: sl check-analysis --app dvna
+      - run:
+          name: ShiftLeft SAST Analysis
+          command: |
+            sl analyze --wait --app dvna --tag branch=$CIRCLE_BRANCH --cpg --js . -- --exclude public/assets/ --ignore-minified
+      - run:
+          name: Check ShiftLeft Scan Results
+          command: |
+            sl check-analysis --app dvna --branch=$CIRCLE_BRANCH
 
 workflows:
   version: 2.1
