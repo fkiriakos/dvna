@@ -1,0 +1,11 @@
+source:
+  branch: master
+build_rules:
+  - id: build-rule-identifier
+    finding_types:
+      - vuln
+      - secret
+    severity:
+      - SEVERITY_MEDIUM_IMPACT # or "moderate"
+      - SEVERITY_HIGH_IMPACT # or "critical"
+    threshold: 1
