@@ -1,0 +1,22 @@
+version: "1"
+project:
+  name: ${scm.git.repo}
+  branch: ${scm.git.branch}
+  revision:
+    name: ${scm.git.commit}
+    date: ${scm.git.commit.date}
+capture:
+  fileSystem:
+    javascript:
+      extensions: [js]
+      files:
+      - directory: ${project.projectDir}
+      - excludeRegex: public/asset|node_modules|bower_components|vendor
+analyze:
+  mode: central
+  coverity:
+    cov-analyze: ["--enable-audit-mode"]
+install:
+  coverity:
+    version: default
+serverUrl: https://poc83.polaris.synopsys.com

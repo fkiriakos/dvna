@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  coverity:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Install Polaris
+          command: |
+            curl -fsLOS $POLARIS_SERVER_URL/api/tools/polaris_cli-linux64.zip
+            unzip -j polaris_cli-linux64.zip -d /tmp
+      - run:
+          name: Run Analysis
+          command: |
+            polaris -c polaris.yml analyze -w
+
+workflows:
+  version: 2.1
+  run-sast-scan:
+    jobs:
+      - coverity
