@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Run Analysis
           command: |
-            polaris -c polaris.yml analyze -w
+            /tmp/polaris -c polaris.yml analyze -w
 
 workflows:
   version: 2.1
