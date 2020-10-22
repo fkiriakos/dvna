@@ -1,5 +1,4 @@
-# Fork For Damn Vulnerable NodeJS Application (DVNA) 
-
+# Damn Vulnerable NodeJS Application (DVNA)
 
 ![dvna-logo](docs/resources/dvna.png)
 
